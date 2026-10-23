@@ -1,5 +1,6 @@
 package com.example.pertemuan6.view
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -19,19 +20,19 @@ import androidx.compose.ui.res.stringResource
 fun FormIsian(
     jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
     OnSubmitBtnClick : () -> Unit
-) {
-    Scaffold(
-        modifier = Modifier,
+){
+    Scaffold (modifier= Modifier,
         {
             TopAppBar(
-                title = { Text(stringResource(id = R.string.home), color = Color.White) },
+                title = { Text(stringResource(id=R.string.home), color = Color.White) },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = colorResource(id = R.color.teal_700)
-                )
-            )
+                    containerColor = colorResource(id = R.color.teal_700))
+            ) }
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.Top,
+        ) {
         }
-    ) {
-
     }
-
 }
